@@ -5,3 +5,4 @@
 - Run: ```npm install```
 - Run ```node index.js``` to start the app
 - Navigate to ```localhost:3000```
+- To Run unit tests: ```npx jest```
