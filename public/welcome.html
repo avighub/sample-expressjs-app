@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+  </head>
+
+  <body>
+    <p id="welcomeMessage"></p>
+    <script>
+      // Function to get query parameters from the URL
+      function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Get the email from the query parameters
+      const email = getQueryParameter("email");
+
+      // Update the welcome message with the email
+      const welcomeMessage = `Welcome ${email}`;
+      document.getElementById("welcomeMessage").textContent = welcomeMessage;
+    </script>
+    <img src="/image.jpg" alt="Image" style="width: 200px; height: 200px" />
+    <br />
+    <a href="/logout">Logout</a>
+  </body>
+</html>
