@@ -31,7 +31,7 @@ app.post("/login", (req, res) => {
     const responseData = { message: "Authenticated", email: email };
     res.status(200).json(responseData);
   } else {
-    const responseData = { message: "Invalid Credentials" };
+    const responseData = { message: "Invalid Credentials_bug" };
     res.status(401).json(responseData);
   }
 });
