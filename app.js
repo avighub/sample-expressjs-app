@@ -26,10 +26,8 @@ app.post("/login", (req, res) => {
   const { email, password } = req.body;
   const user = users.find((u) => u.email === email && u.password === password);
   if (user) {
-    res.status(200).send("Authenticated");
     res.redirect(`/welcome?email=${email}`);
   } else {
-    res.status(401).send("Unauthenticated");
     res.redirect("/");
   }
 });
