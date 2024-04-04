@@ -18,7 +18,3 @@ describe("POST /login", () => {
     expect(response.body.message).toBe("Invalid Credentials");
   });
 });
-
-afterAll(() => {
-  app.close(); // Close the server after all tests are complete
-});
